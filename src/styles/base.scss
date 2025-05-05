@@ -1,0 +1,25 @@
+@import './variables';
+
+// --- Reset CSS ---
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// --- Font ---
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $primary;
+}
+
+// --- Link ---
+a {
+  text-decoration: none;
+}
+
+// --- Image ---
+img {
+ max-width: 100%;
+ height: auto;
+}

@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import AppRouter from './router/index';
+import './styles/main.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    {/* L'exécution de AppRouter produit le Virtual DOM */}
     <AppRouter />
   </React.StrictMode>,
 );

@@ -1,0 +1,59 @@
+@import '../../styles/variables';
+
+// --- header ---
+.header {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 45px 20px 50px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // --- Logo Kasa ---
+  &__logo {
+    height: 68px;
+  }
+
+  // --- Navigation ---
+  &__nav {
+    display: flex;
+    gap: 57px;
+  }
+
+  // --- Liens ---
+  &__link {
+    color: $black;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// --- Styles Responsives Mobile ---
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    padding: 20px 20px 27px 20px;
+
+    // --- Logo ---
+    &__logo {
+      height: 47px;
+    }
+
+    // --- Navigation ---
+    &__nav {
+      gap: 26px;
+    }
+
+    // --- Lien ---
+    &__link {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}

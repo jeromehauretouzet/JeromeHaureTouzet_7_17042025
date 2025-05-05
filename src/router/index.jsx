@@ -1,20 +1,29 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Lodging from '../pages/Lodging';
-import Error404 from '../pages/Error404';
+import Home from '../pages/Home/Home';
+import About from '../pages/About/About';
+import Lodging from '../pages/Lodging/Lodging';
+import Error404 from '../pages/Error404/Error404';
+import MainContainer from '../components/Main-container/Main-container';
 
 function AppRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/a-propos" element={<About />} />
-        <Route path="/logement/:id" element={<Lodging />} />
-        <Route path="*" element={<Error404 />} />
+      {/* --- Route parent --- */}
+      <Route element={<MainContainer />}>
+          {/* --- Route enfants--- */}
+          <Route path="/" element={<Home />} />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="/logement/:id" element={<Lodging />} />
+          <Route path="*" element={<Error404 />} />
+      </Route>
       </Routes>
+
+
+
+
     </Router>
   );
 }
