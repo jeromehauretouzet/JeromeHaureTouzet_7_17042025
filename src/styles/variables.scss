@@ -16,3 +16,10 @@ $border-radius: 10px;
 // --- Responsive Design ---
 $breakpoint-desktop: 1024px;
 $breakpoint-mobile: 768px;
+
+// --- Props ---
+$banner-bg-home: url('../../assets/banner-home.jpg');
+$banner-bg-about: url('../../assets/banner-about.jpg');
+
+$overlay-bg-dark: rgba(0, 0, 0, 0.6);
+$overlay-bg-light: rgba(0, 0, 0, 0.3);

@@ -7,7 +7,11 @@ import Card from '../../components/Card/Card';
 function Home() {
   return (
     <>
-      <Banner/>
+      <Banner
+        page = "home"
+        title = "Chez vous, partout et ailleurs"
+        opacity = "dark"
+      />
 
       <section className="home-gallery-section">                                              {/* --- section Galerie --- */}
         <Card/>

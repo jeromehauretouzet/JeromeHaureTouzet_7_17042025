@@ -6,7 +6,11 @@ import './About.scss';
 function About() {
   return (
     <div className="about-page">
-      <Banner/>
+      <Banner
+        page = "about"
+        title = {null}
+        opacity = "light"
+      />
 
       <section className="about-collapses-section">                             {/* --- section Collapse --- */}
         <Collapse/>

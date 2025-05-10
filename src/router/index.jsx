@@ -20,10 +20,6 @@ function AppRouter() {
           <Route path="*" element={<Error404 />} />
       </Route>
       </Routes>
-
-
-
-
     </Router>
   );
 }

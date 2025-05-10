@@ -1,21 +1,5 @@
 @import '../../styles/variables';
 
-.about-page {
-  .banner {
-    background-image: url('../../assets/banner-about.jpg');
-  
-    // --- Overlay de la bannière ---
-    &__overlay {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    // --- Titre de la bannière ---
-    &__title {
-      display: none;
-    }
-  }
-}
-
 // --- Section des collapses ---
 .about-collapses-section {
   max-width: 1023px;
