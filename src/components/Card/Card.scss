@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+// --- Conteneur Link ---
+.card-link-container {
+  width: calc((100% - 100px) / 3);
+}
+
+// --- Carte ---
+.card {
+  background:
+  linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 100%), $primary;
+  height: 340px;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 10px;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: $white;
+  overflow: hidden;
+
+  // --- Titre de la Carte ---
+  &__title {
+    width: 100%;
+    max-width: 175px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+// Media Query Mobile
+@media (max-width: $breakpoint-mobile) {
+
+  .card-link-container {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: 255px;
+  }
+}

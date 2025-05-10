@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+// --- Section Galerie ---
+.home-gallery-section {
+  background-color: $secondary;
+  border-radius: 25px;
+  padding: 56px 50px 43px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+// Media Query Mobile
+@media (max-width: $breakpoint-mobile) {
+  .home-gallery-section {
+    padding: 0;
+    gap: 20px;
+    background-color: transparent;
+  }
+}

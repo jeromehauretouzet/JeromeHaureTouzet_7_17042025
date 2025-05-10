@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+// --- Collapse ---
+.collapse {
+
+  // --- Barre ---
+  &__bar {
+    background-color: $primary;
+    color: $white;
+    border-radius: 5px;
+    padding: 13px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+  }
+
+  // --- Titre ---
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+// Media Query Mobile
+@media (max-width: $breakpoint-mobile) {
+  .collapse {
+    &__bar {
+      height: 30px;
+      padding: 7px 12px;
+      border-radius: 5px;
+    }
+
+    &__title {
+      font-size: 13px;
+    }
+  }
+}

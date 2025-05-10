@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+//  --- Galerie d'images ---
+.gallery {
+  height: 415px;
+  background-color: $grey;
+  border-radius: 25px;
+}
+
+// Media Query Mobile
+@media (max-width: $breakpoint-mobile) {
+  .gallery {
+    height: 255px;
+    border-radius: $border-radius;
+    margin-bottom: 15px;
+  }
+}
