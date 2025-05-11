@@ -11,6 +11,16 @@
   align-items: center;
   position: relative;
 
+  // --- Props ---
+  &.banner-bg-home {
+    background-image: $banner-bg-home;
+  }
+
+  &.banner-bg-about {
+    background-image: $banner-bg-about;
+  }
+  // --- Fin Props ---
+
   // --- Overlay de la bannière ---
   &__overlay {
     width: 100%;
@@ -34,16 +44,6 @@
     position: relative;
     z-index: 2;
   }
-}
-
-// --- Props ---
-.banner-bg-home {
-  background-image: $banner-bg-home;
-}
-
-// --- Props ---
-.banner-bg-about {
-  background-image: $banner-bg-about;
 }
 
 // Media Query Mobile

@@ -8,8 +8,6 @@ function About() {
     <div className="about-page">
       <Banner
         page = "about"
-        title = {null}
-        opacity = "light"
       />
 
       <section className="about-collapses-section">                             {/* --- section Collapse --- */}
