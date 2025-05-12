@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.scss';
 import Banner from '../../components/Banner/Banner';
 import Card from '../../components/Card/Card';
+import lodgingData from '../../data/logement.json';
 
 // page "Accueil"
 function Home() {
@@ -14,12 +15,14 @@ function Home() {
       />
 
       <section className="home-gallery-section">                                              {/* --- section Galerie --- */}
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        {lodgingData.map(lodging => (
+          <Card
+            key={lodging.id}
+            id={lodging.id}
+            title={lodging.title}
+            cover={lodging.cover}
+          />
+        ))}  
       </section>
     </>
   );
