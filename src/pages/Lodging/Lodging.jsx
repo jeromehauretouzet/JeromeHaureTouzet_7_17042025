@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import Gallery from '../../components/Gallery/Gallery';
-import Collapse from '../../components/Collapse/Collapse'
+import Collapse from '../../components/Collapse/Collapse';
+import lodgingData from '../../data/logement.json';
 import './Lodging.scss';
 
 function Lodging() {
+
+  const { id } = useParams();                                                           // Récupère l'ID du logement depuis l'URL
+  const lodging = lodgingData.find(item => item.id === id);                             // Trouve le logement correspondant à l'ID
+
+  if (!lodging) {                                                                       // Redirection si logement inexistant
+    return <Navigate to="/404" replace />;
+  }
+
   return (
     <div className="lodging-page">
       <Gallery />                                                                       {/* --- Galerie d'images --- */}
@@ -36,8 +46,14 @@ function Lodging() {
       </section>
 
       <section className="lodging-collapses-container">                                 {/* --- Conteneur des menus déroulants --- */}
-        <Collapse />
-        <Collapse />
+        <Collapse
+          title="Description"
+          content={lodging.description}
+        />
+        <Collapse
+          title="Équipements"
+          content={lodging.equipments}
+        />
       </section>
     </div>
   );

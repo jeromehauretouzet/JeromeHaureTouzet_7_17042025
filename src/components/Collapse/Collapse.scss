@@ -13,12 +13,59 @@
     justify-content: space-between;
     align-items: center;
     height: 52px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
   }
 
   // --- Titre ---
   &__title {
     font-size: 24px;
     font-weight: 700;
+  }
+
+  // --- Flèche ---
+  &__arrow {
+    width: 24px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  // --- Wrapper ---
+  &__content-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .45s ease-in-out;
+    background-color: $secondary;
+    border-radius: 0 0 5px 5px;
+    margin-top: -5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  // --- Contenu ---
+  &__content {
+    padding: 20px 18px;
+    color: $black;
+    font-size: 18px;
+    line-height: 1.5;
+    p {
+      margin: 5px;
+    }
+  }
+
+  // --- Collapse ouvert ---
+  &.collapse--open {
+
+    // --- Flèche s'inverse ---
+    .collapse__arrow {
+      transform: rotate(-180deg);
+    }
+
+    // --- Wrapper plus grand ---
+    .collapse__content-wrapper {
+      max-height: 500px;
+    }
   }
 }
 
@@ -33,6 +80,15 @@
 
     &__title {
       font-size: 13px;
+    }
+
+    &__arrow {
+      width: 16px;
+    }
+
+    &__content {
+      padding: 15px 12px;
+      font-size: 12px;
     }
   }
 }
