@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import Collapse from '../../components/Collapse/Collapse';
 import './About.scss';
+import aboutBannerImage from '../../assets/banner-about.jpg';
 
 // Données pour les collapses de la page "À Propos"
 const aboutData = [
@@ -31,7 +32,7 @@ function About() {
   return (
     <div className="about-page">
       <Banner
-        page = "about"
+        imageUrl={aboutBannerImage}
       />
 
       <section className="about-collapses-section">                             {/* --- section Collapse --- */}

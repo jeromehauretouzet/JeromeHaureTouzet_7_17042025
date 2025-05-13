@@ -11,16 +11,6 @@
   align-items: center;
   position: relative;
 
-  // --- Props ---
-  &.banner-bg-home {
-    background-image: $banner-bg-home;
-  }
-
-  &.banner-bg-about {
-    background-image: $banner-bg-about;
-  }
-  // --- Fin Props ---
-
   // --- Overlay de la bannière ---
   &__overlay {
     width: 100%;
@@ -30,10 +20,6 @@
     top: 0;
     left: 0;
     z-index: 1;
-
-    // --- Props ---
-    &--dark  { background-color: $overlay-bg-dark; }
-    &--light { background-color: $overlay-bg-light; }
   }
 
   // --- Titre de la bannière ---
