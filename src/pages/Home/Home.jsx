@@ -21,7 +21,7 @@ function Home() {
             key={lodging.id}
             id={lodging.id}
             title={lodging.title}
-            cover={lodging.cover}
+            imageUrl={lodging.cover}
           />
         ))}  
       </section>

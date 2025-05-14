@@ -30,11 +30,11 @@ function Banner({ imageUrl, title = '', overlayOpacity = 0.3 }) {
 function validateBannerProps(imageUrl, title, overlayOpacity) {
 
   if (typeof imageUrl !== 'string' || !imageUrl) {
-    throw new Error(`Banner : La prop 'imageUrl' est obligatoire et doit avoir une URL de type string`);
+    throw new Error(`Banner : La prop 'imageUrl' est obligatoire et doit avoir une URL (string). Valeur reçue: '${imageUrl}'`);
   }
 
   if (title && (typeof title !== 'string')) {
-    throw new Error(`Banner: La prop 'title' doit être une chaîne de caractères non vide. Valeur reçue: '${title}'`);
+    throw new Error(`Banner: La prop 'title' doit être (string). Valeur reçue: '${title}'`);
   }
 
   if (typeof overlayOpacity !== 'number' || overlayOpacity < 0 || overlayOpacity > 1) {

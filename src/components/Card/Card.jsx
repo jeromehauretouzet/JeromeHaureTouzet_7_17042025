@@ -5,15 +5,15 @@ import './Card.scss';
 /**
  * Affiche une carte de présentation pour un logement.
  * @param {object} props
- * @param {string} props.id       - L'identifiant unique du logement, utilisé pour le lien
- * @param {string} props.title    - Le titre du logement à afficher
- * @param {string} props.cover    - L'URL de l'image du logement
+ * @param {string} props.id          - L'identifiant unique du logement, utilisé pour le lien
+ * @param {string} props.title       - Le titre du logement à afficher
+ * @param {string} props.imageUrl    - L'URL de l'image du logement
  */
-function Card({ id, title, cover }) {
+function Card({ id, title, imageUrl }) {
 
-  validateCardProps(id, title, cover);
+  validateCardProps(id, title, imageUrl);
 
-  const cardCoverStyle = { backgroundImage: `url(${cover})` };
+  const cardCoverStyle = { backgroundImage: `url(${imageUrl})` };
 
   return (
     <Link to={`/logement/${id}`} className="card-link-container">                     {/* --- conteneur lien --- */}
@@ -25,24 +25,18 @@ function Card({ id, title, cover }) {
   );
 }
 
-/**
- * Valide les propriétés fournies au composant Card
- * @param {string} id           - L'id du logement
- * @param {string} title        - Le titre du logement
- * @param {string} cover        - L'URL de l'image du logement
- * @throws {Error}              - Si une prop requise est manquante ou a un type incorrect
- */
-function validateCardProps(id, title, cover) {
+
+function validateCardProps(id, title, imageUrl) {
   if (typeof id !== 'string' || !id) {
-    throw new Error(`Erreur: La prop 'id' est obligatoire et doit être une chaîne de caractères.`);
+    throw new Error(`Erreur: La prop 'id' est obligatoire et doit être (string). Valeur reçue: '${id}'`);
   }
 
   if (typeof title !== 'string' || !title) {
-    throw new Error(`Erreur: La prop 'title' est obligatoire et doit être une chaîne de caractères non vide.`);
+    throw new Error(`Erreur: La prop 'title' est obligatoire et doit être (string). Valeur reçue: '${title}'`);
   }
 
-  if (typeof cover !== 'string' || !cover) {
-    throw new Error(`Erreur: La prop 'cover' (URL de l'image) est obligatoire et doit être une chaîne de caractères.`);
+  if (typeof imageUrl !== 'string' || !imageUrl) {
+    throw new Error(`Erreur: La prop 'imageUrl' est obligatoire et doit avoir une URL (string). Valeur reçue: '${imageUrl}'`);
   }
 
 }
