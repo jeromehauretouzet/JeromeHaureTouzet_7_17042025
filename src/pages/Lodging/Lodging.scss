@@ -35,7 +35,9 @@
   // --- Tags ---
   &__tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 80%;
 
     // --- Tag ---
     .tag {
@@ -46,6 +48,8 @@
       font-weight: 700;
       min-width: 115px;
       min-height: 25px;
+      padding-left: 15px;
+      padding-right: 15px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -79,7 +83,6 @@
   &__picture {
     width: 64px;
     height: 64px;
-    background-color: $grey;
     border-radius: 50%;
   }
 }
@@ -97,10 +100,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../../assets/star-empty.svg');
-    font-size: 24px;
 
     // --- Étoile rempli ---
-    &-filled {
+    &.star-filled {
       background-image: url('../../assets/star-filled.svg');
     }
   }
@@ -135,12 +137,16 @@
       margin-bottom: 10px; 
     }
 
-    &__tags .tag {
-      font-size: 10px;
-      border-radius: 7px;
-      min-width: 86px;
-      min-height: 18px;
-    }
+    &__tags{
+      width: 100%;
+
+      .tag {
+        font-size: 10px;
+        border-radius: 7px;
+        min-width: 86px;
+        min-height: 18px;
+        }
+      }
   }
 
   .lodging-host-rating {

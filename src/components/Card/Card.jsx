@@ -28,15 +28,15 @@ function Card({ id, title, imageUrl }) {
 
 function validateCardProps(id, title, imageUrl) {
   if (typeof id !== 'string' || !id) {
-    throw new Error(`Erreur: La prop 'id' est obligatoire et doit être (string). Valeur reçue: '${id}'`);
+    throw new Error(`Card : La prop 'id' est obligatoire et doit être (string). Valeur reçue: '${id}'`);
   }
 
   if (typeof title !== 'string' || !title) {
-    throw new Error(`Erreur: La prop 'title' est obligatoire et doit être (string). Valeur reçue: '${title}'`);
+    throw new Error(`Card : La prop 'title' est obligatoire et doit être (string). Valeur reçue: '${title}'`);
   }
 
   if (typeof imageUrl !== 'string' || !imageUrl) {
-    throw new Error(`Erreur: La prop 'imageUrl' est obligatoire et doit avoir une URL (string). Valeur reçue: '${imageUrl}'`);
+    throw new Error(`Card : La prop 'imageUrl' est obligatoire et doit avoir une URL (string). Valeur reçue: '${imageUrl}'`);
   }
 
 }
