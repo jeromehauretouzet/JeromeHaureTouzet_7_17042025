@@ -16,7 +16,7 @@ function Lodging() {
 
   const hostName = lodging.host.name.split(' ');                                        // Sépare le nom et le prénom
   const firstName = hostName[0];
-  const name = hostNameParts[1];
+  const name = hostName[1];
 
   return (
     <div className="lodging-page">
